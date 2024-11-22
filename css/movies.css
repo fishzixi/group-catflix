@@ -1,0 +1,416 @@
+@import url(grid_layout\ .css);
+
+body {
+    background-color: #f0efef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* 头部开始 */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a {
+    width: 100px;
+    height: 200px;
+    background-color: aqua;
+}
+
+@media screen and (min-width:1300px) {
+    .w {
+        width: 1216px !important;
+        margin: 0 auto;
+       
+    }
+}
+
+/* .w {
+    width: 1216px;
+     margin: 0 auto; 
+} */
+
+
+
+.tu {
+    width: 120px;
+    height: 28px;
+}
+
+.tu img {
+    width: 120px;
+    height: 28px;
+    
+}
+
+.tu a {
+    display: block;
+    
+}
+
+/* 头部nav部分 */
+
+.nav {
+    width: 345px;
+    height: 58px;
+    border: 1px solid #999;
+    background-color: #d4d3d3;
+    border-radius: 50px;
+}
+
+.nav ul {
+    height: 58px;
+    width: 345px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.nav ul li {
+    width: 108px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.nav ul li:hover {
+    background-color: white;
+}
+
+.nav li a {
+    display: block;
+    height: 50px;
+    width: 108px;
+    position: relative;
+}
+
+@media screen and (max-width: 1224px) {
+    .nav {
+        display: none;
+    }
+
+    .sea {
+        visibility: hidden;
+    }
+}
+
+.nav li svg,
+.search svg{
+   position: absolute;   
+   top: 50%;
+   transform: translateY(-50%);
+   left: 10px;
+   color: black;
+}
+
+.nav a,
+.search a {
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    color: black;
+}
+
+.nav a span {
+    margin-left: 15px;
+}
+
+.search {
+    width: 190px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search a {
+    display: block;
+}
+
+.search .sea {
+    position: relative;
+    width: 115px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+.search .sea:hover,
+.search .sea:hover svg,
+.search .sea:hover span {
+    background-color: black;
+    color: white;
+}
+
+.search .user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.search .user:hover,
+.search .user:hover svg {
+    background-color: black;
+    color: white;
+}
+
+.search .user svg {
+    margin-left: 3px;
+}
+
+.search .user a {
+    height: 50px;
+}
+/* 头部结束 */
+.top_movies {
+    margin-top: 40px;
+}
+
+
+/* banner开始 */
+.banner-nav {
+    width: 1216px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-nav div {
+    border: 1px solid gray;
+    
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 20px;
+}
+
+.banner-nav a {
+    display: block;
+    color:black;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.ban-nav1 {
+    width: 90PX;
+}
+
+.ban-nav2 {
+    width: 116.5px;
+}
+
+.ban-nav3 {
+    width: 76px;
+}
+
+.ban-nav4 {
+    width: 94.5px;
+}
+
+.ban-nav5 {
+    width: 86px;
+}
+
+.ban-nav6 {
+    width: 164px;
+}
+
+.ban-nav7 {
+    width: 111px;
+}
+
+.ban-nav8 {
+    width: 100px;
+}
+
+.ban-nav9 {
+    width: 84px;
+}
+
+.ban-nav10 {
+    width: 84px;
+}
+
+.ban-nav11 {
+    width: 128px;
+}
+
+.banner-nav a:focus-within {
+    background-color: black;
+    color: white;
+}
+
+.banner-nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* banner结束,tu开始 */
+
+.end-tu {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+   
+    
+    
+}
+
+.end-tu a {
+    display: block;
+}
+
+.end-tu img {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+    
+}
+
+.end-tu div {
+    transition: all 0.5s;
+}
+
+.end-tu div:hover {
+    transform: scale(1.05);
+}
+
+/* more开始 */
+
+.more {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more a {
+    width: 130px;
+    height: 48px;
+    display: block;
+    border-radius: 25px;
+    border: 1px solid #999;
+    background-color: #dcdbdb;
+    text-align: center;
+    color: black;
+    line-height: 48px;
+
+}
+
+.more a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* foot-nav开始 */
+/* .foot-nav div {
+    width: 100%;
+} */
+
+.foot-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.foot-nav img {
+    width: 120px;
+    height: 28px;
+}
+
+.foot-nav ul {
+    /* width: 250px; */
+    margin-top: 15px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.foot-nav ul a {
+    color: #999;
+    margin-right: 18px;
+
+}
+
+.foot-nav .home a {
+    color: black;
+}
+
+.foot-nav ul a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1226px) {
+    .foot-nav {
+        display: none !important;
+    }
+}
+
+/* foot开始 */
+.foot {
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.foot a {
+    display: block;
+    color: black;
+    position: relative;
+    height: 100%;
+    line-height: 90px;
+
+}
+
+.foot div {
+    height: 100%;
+}
+
+.foot a svg {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1224px) {
+    .foot {
+        display: none;
+    }
+}
+
+
+
+
