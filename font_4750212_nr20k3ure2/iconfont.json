@@ -1,0 +1,44 @@
+{
+  "id": "4750212",
+  "name": "作业1",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "658017",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "938271",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "1479344",
+      "name": "ic_local_movies",
+      "font_class": "ic_local_movies",
+      "unicode": "ea51",
+      "unicode_decimal": 59985
+    },
+    {
+      "icon_id": "3186893",
+      "name": "电视",
+      "font_class": "dianshi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "19949527",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    }
+  ]
+}
