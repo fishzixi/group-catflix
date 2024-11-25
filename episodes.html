@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Episodes</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/响应式.css">
+  <!-- 图标svg -->
+  <svg width="0" height="0" style="display: none;">
+    <symbol id="home" viewBox="0 0 16 16">
+      <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"
+        d="M5 10.5h6M2.5 6v7.5h11V6L8 2.5z" />
+    </symbol>
+    <symbol id="user" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </g>
+    </symbol>
+    <symbol id="movie" viewBox="-2 -2 24 24">
+      <path fill="currentColor"
+        d="M6 15v3h8v-7H6zm-2-2v-2H2V9h2V7H2v6zm0 2H2v1a2 2 0 0 0 2 2zm14-2V7h-2v2h2v2h-2v2zm0 2h-2v3a2 2 0 0 0 2-2zm-4-8V2H6v7h8zm4-2V4a2 2 0 0 0-2-2v3zM4 5V2a2 2 0 0 0-2 2v1zm0-5h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" />
+    </symbol>
+    <symbol id="series" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke-width="1.5"
+        d="M20 6h-5.586l2.293-2.293l-1.414-1.414L12 5.586L8.707 2.293L7.293 3.707L9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2M4 19V8h16l.002 11z" />
+    </symbol>
+    <symbol id="search" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="m20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8a7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42M5 11a6 6 0 1 1 6 6a6 6 0 0 1-6-6" />
+    </symbol>
+    <symbol id="plus" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 5a1 1 0 0 1 1 1v5h5a1 1 0 1 1 0 2h-5v5a1 1 0 1 1-2 0v-5H6a1 1 0 1 1 0-2h5V6a1 1 0 0 1 1-1" />
+    </symbol>
+    <!-- 24个开始 -->
+    <symbol id="prime" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M0 9.508q0-.064.028-.09q.027-.025.086-.025h.329q.105 0 .127.101l.032.119q.137-.133.33-.21a1 1 0 0 1 .396-.079q.442 0 .7.326q.257.325.257.88q0 .38-.127.665q-.128.285-.347.437a.85.85 0 0 1-.502.154q-.187 0-.355-.06a.9.9 0 0 1-.288-.164v1.003q0 .065-.025.09t-.09.025H.115q-.06 0-.086-.025q-.028-.025-.028-.09zm1.113.32a.87.87 0 0 0-.447.124v1.206a.83.83 0 0 0 .447.124q.256 0 .376-.174q.121-.175.121-.55q0-.381-.118-.555q-.12-.174-.379-.174zm2.248-.087q.182-.202.344-.286a.7.7 0 0 1 .345-.085h.063q.064 0 .092.025t.027.09v.385q0 .06-.025.087t-.089.027l-.082-.004a1.4 1.4 0 0 0-.383.025q-.15.03-.256.076v1.54q0 .06-.025.087q-.024.028-.089.028h-.437q-.06 0-.087-.028q-.027-.027-.028-.087V9.508q0-.064.028-.09q.027-.025.087-.025h.328q.105 0 .128.1zm1.526-.71a.4.4 0 0 1-.278-.096a.34.34 0 0 1-.105-.262q0-.165.105-.26a.4.4 0 0 1 .278-.097q.173 0 .278.096t.105.261a.34.34 0 0 1-.105.262a.4.4 0 0 1-.278.096m-.333.477q0-.064.027-.09q.029-.025.087-.025h.438q.064 0 .089.025c.025.025.025.047.025.09v2.113q0 .06-.025.087q-.025.028-.09.028h-.437q-.06 0-.087-.028q-.027-.027-.027-.087zm1.837.11q.242-.16.435-.227q.195-.067.4-.067q.41 0 .579.294q.232-.157.438-.225q.205-.069.424-.069q.319 0 .495.179q.175.18.175.5v1.618q0 .06-.025.087q-.025.028-.089.027h-.438q-.06 0-.086-.027q-.028-.027-.028-.087V10.15q0-.312-.278-.312q-.246 0-.497.119v1.664q0 .06-.025.087q-.025.028-.09.027h-.437q-.06 0-.086-.027q-.028-.027-.028-.087V10.15q0-.312-.278-.312q-.255 0-.502.123v1.66q0 .06-.025.087q-.025.028-.089.027h-.438q-.059 0-.086-.027t-.027-.087V9.508q0-.064.027-.09t.086-.025h.329q.104 0 .128.101zm4.387 1.16a1.8 1.8 0 0 1-.451-.05q.027.305.185.44q.157.132.476.132q.127 0 .249-.016a3 3 0 0 0 .362-.078l.023-.002q.078 0 .078.105v.211q0 .073-.02.103a.17.17 0 0 1-.08.053a2 2 0 0 1-.708.128q-.565 0-.868-.312q-.304-.31-.304-.893q0-.597.31-.935q.31-.34.862-.34q.424 0 .664.206a.69.69 0 0 1 .24.55q0 .345-.258.52q-.258.178-.76.177zm.064-.99q-.437 0-.506.54q.183.037.406.037q.232 0 .337-.071t.105-.218q0-.29-.342-.289zm2.948 1.946a.2.2 0 0 1-.075-.011a.1.1 0 0 1-.05-.037a.3.3 0 0 1-.038-.071l-.777-2.04l-.023-.063a.2.2 0 0 1-.009-.05q0-.07.091-.07h.454q.073 0 .107.028q.034.027.052.092l.468 1.622l.477-1.622a.2.2 0 0 1 .052-.092q.034-.027.107-.027h.44q.091 0 .091.068a.2.2 0 0 1-.009.05l-.022.065l-.777 2.039a.3.3 0 0 1-.039.07a.1.1 0 0 1-.047.038a.2.2 0 0 1-.078.01zm2.02-2.703a.4.4 0 0 1-.277-.097a.34.34 0 0 1-.105-.26q0-.165.105-.262a.4.4 0 0 1 .277-.096q.172 0 .277.096q.104.096.104.261t-.104.261a.4.4 0 0 1-.277.097m-.218 2.703q-.06 0-.086-.028q-.028-.027-.028-.087V9.507q0-.064.028-.09q.027-.024.086-.024h.436q.063 0 .089.025q.024.025.024.09v2.111q0 .06-.024.087q-.026.028-.09.028zm1.948.05a.87.87 0 0 1-.513-.153a.97.97 0 0 1-.334-.426a1.6 1.6 0 0 1-.116-.63q0-.569.268-.91a.86.86 0 0 1 .709-.341a.98.98 0 0 1 .622.206V8.458q0-.064.027-.09q.027-.024.087-.025h.436q.063 0 .088.025t.025.09v3.161q0 .06-.025.087q-.025.028-.088.028h-.364a.14.14 0 0 1-.084-.023a.14.14 0 0 1-.043-.078l-.027-.105a.96.96 0 0 1-.668.256m.218-.504a.76.76 0 0 0 .418-.128v-1.21a.87.87 0 0 0-.45-.114q-.24 0-.358.18q-.119.182-.118.548q0 .367.124.546q.126.178.384.178m2.588-.51q-.253 0-.44-.05q.027.302.18.432q.154.13.465.13q.125 0 .242-.016a3 3 0 0 0 .354-.076l.022-.002q.075 0 .075.103v.207q0 .072-.02.101a.17.17 0 0 1-.077.052a1.9 1.9 0 0 1-.69.126q-.551 0-.846-.306q-.296-.306-.296-.876q0-.585.302-.917q.303-.333.84-.333q.414 0 .647.203a.68.68 0 0 1 .234.539q0 .337-.251.51q-.252.173-.74.173zm.063-.97q-.428 0-.494.53q.178.036.396.036q.225 0 .329-.07q.102-.069.102-.213q0-.285-.333-.284zm2.442 2.003q-.54 0-.845-.328q-.304-.327-.304-.914q0-.582.304-.91q.305-.327.845-.327c.54 0 .642.109.845.327q.304.328.304.91q0 .586-.304.914q-.305.328-.845.328m0-.514q.477 0 .477-.728q0-.724-.477-.724t-.477.724q0 .729.477.728m-6.844 1.886c.405-.306.944-.408 1.39-.408c.418 0 .756.09.828.185c.15.2-.039 1.584-.775 2.244c-.112.102-.22.047-.17-.087c.166-.442.536-1.436.36-1.677c-.175-.242-1.158-.115-1.6-.058c-.068.008-.107-.02-.112-.061v-.023c.004-.036.03-.078.079-.115m-10.184-.172a.105.105 0 0 1 .106-.091q.04 0 .089.028a11.8 11.8 0 0 0 6.194 1.772c1.52 0 3.19-.34 4.726-1.043c.232-.105.426.164.2.346c-1.371 1.09-3.359 1.67-5.07 1.67c-2.397 0-4.557-.956-6.191-2.547a.17.17 0 0 1-.054-.097Z" />
+    </symbol>
+    <symbol id="apple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M20.57 17.735h-1.815l-3.34-9.203h1.633l2.02 5.987c.075.231.273.9.586 2.012l.297-.997l.33-1.006l2.094-6.004H24zm-5.344-.066a5.8 5.8 0 0 1-1.55.207c-1.23 0-1.84-.693-1.84-2.087V9.646h-1.063V8.532h1.121V7.081l1.476-.602v2.062h1.707v1.113H13.38v5.805c0 .446.074.75.214.932s.396.264.75.264c.207 0 .495-.041.883-.115zm-7.29-5.343c.017 1.764 1.55 2.358 1.567 2.366c-.017.042-.248.842-.808 1.658c-.487.71-.99 1.418-1.79 1.435c-.783.016-1.03-.462-1.93-.462c-.89 0-1.17.445-1.913.478c-.758.025-1.344-.775-1.838-1.484c-.998-1.451-1.765-4.098-.734-5.88c.51-.89 1.426-1.451 2.416-1.46c.75-.016 1.468.512 1.93.512s1.327-.627 2.234-.536c.38.016 1.452.157 2.136 1.154c-.058.033-1.278.743-1.27 2.219M6.468 7.988c.404-.495.685-1.18.61-1.864c-.585.025-1.294.388-1.723.883c-.38.437-.71 1.138-.619 1.806c.652.05 1.328-.338 1.732-.825" />
+    </symbol>
+    <symbol id="hbo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M7.042 16.896H4.414v-3.754H2.708v3.754H.01L0 7.22h2.708v3.6h1.706v-3.6h2.628zm12.043.046C21.795 16.94 24 14.689 24 11.978a4.89 4.89 0 0 0-4.915-4.92c-2.707-.002-4.09 1.991-4.432 2.795c.003-1.207-1.187-2.632-2.58-2.634H7.59v9.674l4.181.001c1.686 0 2.886-1.46 2.888-2.713c.385.788 1.72 2.762 4.427 2.76zm-7.665-3.936c.387 0 .692.382.692.817s-.305.817-.692.817h-1.33v-1.634zm.005-3.633c.387 0 .692.382.692.817c0 .436-.305.818-.692.818h-1.33V9.373zm1.77 2.607c.305-.039.813-.387.992-.61c-.063.276-.068 1.074.006 1.35c-.204-.314-.688-.701-.998-.74m3.43 0a2.462 2.462 0 1 1 4.924 0a2.462 2.462 0 0 1-4.925 0zm2.462 1.936a1.936 1.936 0 1 0 0-3.872a1.936 1.936 0 0 0 0 3.872" />
+    </symbol>
+    <symbol id="fox" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M3.069 9.7h3.42L6.3 6.932H0v10.136h3.069V13.8h2.789v-2.778H3.069ZM24 6.932h-3.291L19.48 9.1l-1.231-2.168h-3.292l2.871 5.076l-2.871 5.06h3.308l1.215-2.142l1.213 2.142H24l-2.871-5.06Zm-12.592 0A5.067 5.067 0 1 0 16.475 12a5.067 5.067 0 0 0-5.067-5.065Zm.888 7.146a.867.867 0 0 1-.873.847a.847.847 0 0 1-.837-.858V9.919a.88.88 0 0 1 .837-.9a.913.913 0 0 1 .873.9Z" />
+    </symbol>
+    <symbol id="max" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M22 9.54h-1.706A12 12 0 0 1 18.9 11.3a11 11 0 0 1-1.395-1.76h-1.724a17 17 0 0 0 2.036 2.56a22 22 0 0 0-2.036 2.633h1.724a11.4 11.4 0 0 1 1.395-1.815a11.7 11.7 0 0 1 1.36 1.819H22a21 21 0 0 0-2.027-2.637A20 20 0 0 0 22 9.54m-7.83.685a2.2 2.2 0 0 0-1.776-.825a2.677 2.677 0 0 0-2.6 2.737a2.68 2.68 0 0 0 2.6 2.737a2.21 2.21 0 0 0 1.776-.823v.684h1.36V9.54h-1.36zm-1.56 3.447a1.533 1.533 0 1 1 1.533-1.533a1.53 1.53 0 0 1-1.533 1.533M8.184 9.4a3.03 3.03 0 0 0-1.828.779a1.23 1.23 0 0 0-1.2-.779a3 3 0 0 0-1.81.788V9.54H2v5.2h1.429v-3.234c.624-.493.91-.649 1.144-.649c.277 0 .459.173.459.606v3.274h1.429V11.5c.623-.485.9-.641 1.143-.641c.277 0 .459.173.459.606v3.274h1.429v-3.778c0-1.17-.667-1.561-1.308-1.561m4.426 1.552a1.187 1.187 0 1 0 1.178 1.187a1.18 1.18 0 0 0-1.178-1.187" />
+    </symbol>
+    <symbol id="p" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M18.93 19.51a1.3 1.3 0 0 0-.6-.15a1.22 1.22 0 0 0-.9.39a1.2 1.2 0 0 0-.39.87a1.2 1.2 0 0 0 0 .39a1.29 1.29 0 0 0 2.38.32a2 2 0 0 0 .11-.24a1 1 0 0 0 .05-.41a1 1 0 0 0-.05-.41a1.34 1.34 0 0 0-.6-.76M18 15.07a1.29 1.29 0 0 0 1.55-.86a.9.9 0 0 0 .06-.42a1.3 1.3 0 0 0-.7-1.17a1.2 1.2 0 0 0-.59-.15A1.33 1.33 0 0 0 17 13.79a1.32 1.32 0 0 0 1 1.28m.4-6.15a1.27 1.27 0 0 0-1.22.72a1.3 1.3 0 0 0 .25 1.52a1.2 1.2 0 0 0 .58.35a1.28 1.28 0 0 0 1.1-.22a1.4 1.4 0 0 0 .46-.65a1.2 1.2 0 0 0 .05-.41a1 1 0 0 0-.05-.41a1.29 1.29 0 0 0-1.17-.9m.25-3.42a1.4 1.4 0 0 0-.7 0a1.31 1.31 0 0 0-.85.85a1.5 1.5 0 0 0 0 .7a1.31 1.31 0 0 0 1.06 1A1.36 1.36 0 0 0 19 7.9a1.42 1.42 0 0 0 .61-1.12a1.5 1.5 0 0 0-.15-.59a1.38 1.38 0 0 0-.81-.69m-.58-.9a1.29 1.29 0 0 0 1.51-.92a1.33 1.33 0 0 0-.68-1.55a1.14 1.14 0 0 0-.64-.13a1.2 1.2 0 0 0-.85.39a1.2 1.2 0 0 0-.36.87a.9.9 0 0 0 0 .38a1.32 1.32 0 0 0 1.02.96m.61 11.4a1.29 1.29 0 0 0-1.61 1a1.6 1.6 0 0 0 0 .69a1.32 1.32 0 0 0 .92.87a.4.4 0 0 0 .14 0a1.5 1.5 0 0 0 .51 0a1.38 1.38 0 0 0 .82-.68a1.5 1.5 0 0 0 .15-.59a1.5 1.5 0 0 0-.15-.6a1.34 1.34 0 0 0-.78-.69M9.04 3.184c-4.94 0-5.33 5.34-5.33 5.34v12.23h2.48v-6.82l.92.89l4.12-1.51a5.13 5.13 0 0 0 3.12-4.57a5.42 5.42 0 0 0-5.31-5.56m1.12 8l-3.94 1.53v-4.53a2.79 2.79 0 0 1 2.71-2.51a2.85 2.85 0 0 1 2.86 2.93a2.75 2.75 0 0 1-1.63 2.58" />
+    </symbol>
+    <symbol id="starz" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M2.27 9.283c-1.893 0-2.14 1.188-2.14 1.551c0 2.199 2.932 1.396 2.932 2.236c0 .208-.164.428-.737.428c-.631 0-.76-.29-.76-.51H0c.005.402.168 1.729 2.326 1.729c1.6 0 2.287-.752 2.287-1.703c0-2.18-2.996-1.355-2.996-2.18c0-.163.129-.408.631-.408s.631.245.631.408h1.49c0-.392-.208-1.55-2.1-1.55zm2.277.147v1.404h1.42v3.736h1.549v-3.736h1.44V9.43Zm5.619 0l-2.035 5.14h1.643l.183-.558h1.799l.186.558h1.64l-2.035-5.14Zm3.742 0v5.14h1.549v-2.164l1.289 2.164h1.836l-1.312-1.902c.7-.314.992-.93.992-1.557h-.002c0-.928-.613-1.681-2.121-1.681h-.002zm4.93 0v1.404h2.037L18.65 14.57h4.182l.78-1.404h-2.454l2.223-3.736Zm-3.381 1.265h.682c.416 0 .58.225.58.504c0 .28-.164.506-.58.506v-.002h-.682zm-4.601.61l.558 1.677H10.3zm12.836 2.715a.31.31 0 0 0 0 .619a.31.31 0 0 0 .308-.309a.31.31 0 0 0-.309-.31m-.014.06h.013a.25.25 0 0 1 .248.25a.25.25 0 0 1-.248.248a.25.25 0 0 1-.013-.498m-.094.084v.33h.06v-.129h.048l.07.13h.07l-.078-.138a.1.1 0 0 0 .047-.033a.1.1 0 0 0 .02-.06c0-.06-.042-.1-.106-.1zm.06.063h.065q.048 0 .049.039q-.001.039-.049.039h-.064z" />
+    </symbol>
+    <symbol id="nbc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M13.954 17.93a1.57 1.57 0 0 0 .811-1.443a1.805 1.805 0 0 0-1.943-1.767H9.99v6.894h3.176a1.94 1.94 0 0 0 1.982-1.975a1.86 1.86 0 0 0-1.194-1.709m-2.529-2.168h1.061a.9.9 0 1 1 0 1.793h-1.061zm1.291 4.817h-1.291v-1.994l1.291-.006a1 1 0 1 1 0 2M19.89 9.241a2.1 2.1 0 0 0-1.153.342l-5.749 3.868h6.9a2.105 2.105 0 1 0 0-4.21zM7.744 18.587L3.35 14.575v7.032h1.427v-3.859l4.394 4.013v-7.034H7.744Zm7.712-.419a3.79 3.79 0 0 0 3.887 3.681a3.7 3.7 0 0 0 1.318-.279v-1.4a2.4 2.4 0 1 1 0-4.007v-1.404a3.4 3.4 0 0 0-1.318-.273a3.79 3.79 0 0 0-3.887 3.682m-4.465-4.719L5.256 9.585a2.1 2.1 0 1 0-1.151 3.864Zm1.759-8.955c.317.016.484.1.084.267a.75.75 0 0 0-.473.913l.89 6.223l2.968-6.784a2.111 2.111 0 1 0-4.028-.613Zm-4.975.621l2.961 6.778l1.045-7.3a2.106 2.106 0 1 0-4.006.522m5.525 7.674l6.013-4.072a2.1 2.1 0 1 0-3.08-2.617ZM4.687 8.717l6 4.068L7.755 6.1a2.1 2.1 0 1 0-3.068 2.617" />
+    </symbol>
+    <symbol id="lifx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M3.128 8.2a3.1 3.1 0 0 0-2.212.92A3.15 3.15 0 0 0 0 11.347a3.14 3.14 0 0 0 .916 2.226l.27.266l.014-.014a2.73 2.73 0 0 1 1.932-.795a2.74 2.74 0 0 1 1.931.795l.015.014l.266-.27a3.16 3.16 0 0 0 .916-2.226c0-.806-.305-1.612-.916-2.226A3.14 3.14 0 0 0 3.128 8.2m0 .725a2.4 2.4 0 0 1 1.701.707a2.43 2.43 0 0 1 .156 3.252a3.42 3.42 0 0 0-3.72 0a2.45 2.45 0 0 1-.544-1.537c0-.618.234-1.24.706-1.715a2.38 2.38 0 0 1 1.701-.707m5.316.082v6.025h3.167v-1.487H9.928l.004-4.538zm4.247 0v6.022h1.487V9.007zm2.585 0v6.025h1.487V13.15h1.918v-1.41h-1.918v-1.228h3.047l.863 1.545l-1.662 2.975h1.662l.813-1.53l.696 1.53h1.779l-1.665-2.975L24 9.007h-1.779l-.735 1.686l-.735-1.686zM3.128 13.75c-.518 0-1.04.202-1.438.6l.444.443a1.41 1.41 0 0 1 1.996 0l.443-.443c-.4-.398-.92-.6-1.445-.6m0 1.324a.7.7 0 0 0-.507.213l.507.511l.508-.511a.7.7 0 0 0-.508-.213" />
+    </symbol>
+    <symbol id="sho" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M16.99 12.167c0-4.808 1.779-7.84 3.903-8.16C18.769 1.397 15.221 0 11.999 0C8.451 0 5.265 1.54 3.07 3.985c2.094.416 2.806 2.174 2.806 4.892H3.314c0-1.605-.334-2.436-1.284-2.436c-.427 0-.758.217-.954.587l-.084.184a2.1 2.1 0 0 0-.114.71c0 3.324 5.46 3.159 5.46 8.27c0 1.995-1.53 3.855-3.252 3.855C5.35 22.52 8.441 24 12 24c3.46 0 6.577-1.464 8.766-3.808c-2.018-.509-3.776-3.413-3.776-8.025m-1.142 7.921h-2.746V13.26h-2.967v6.83H7.384V4.327h2.746v6.348h2.972V4.327h2.746zM2.372 17.58c-1.32 0-2.399-2.32-2.372-5.8c1.905 1.72 3.681 2.11 3.681 4.145c0 .981-.543 1.655-1.309 1.655M24 12.002c0 2.844-.896 5.409-2.1 5.409c-1.445 0-2.181-2.703-2.181-5.498c0-2.654.771-5.308 2.181-5.308c1.676 0 2.1 4.102 2.1 5.397" />
+    </symbol>
+    <!-- 视频 -->
+    <symbol id="video" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+      <path fill="white"
+        d="M5.754 4a3.75 3.75 0 0 0-3.75 3.75v12.5A3.75 3.75 0 0 0 5.754 24H22.25A3.75 3.75 0 0 0 26 20.25V7.75A3.75 3.75 0 0 0 22.25 4zm-2.25 3.75a2.25 2.25 0 0 1 2.25-2.25H22.25a2.25 2.25 0 0 1 2.25 2.25v12.5a2.25 2.25 0 0 1-2.25 2.25H5.755a2.25 2.25 0 0 1-2.25-2.25zM10 10.251v7.5a1 1 0 0 0 1.472.881l7-3.75a1 1 0 0 0 0-1.762l-7-3.75a1 1 0 0 0-1.472.88" />
+    </symbol>
+  </svg>
+</head>
+
+<body>
+  <!-- 顶部部分 -->
+  <header class="header">
+    <div>
+      <img class="header-logo" src="https://catflix.su/wp-content/themes/distv/resources/assets/img/catflix.svg" />
+      <div class="header-menu">
+        <div class="header-menu-item">
+          <svg width="22" height="22">
+            <use xlink:href="#home" />
+          </svg>
+          <span>Home</span>
+        </div>
+        <div class="header-menu-item">
+          <svg width="22" height="22">
+            <use xlink:href="#movie" />
+          </svg>
+          <span>Movies</span>
+        </div>
+        <div class="header-menu-item">
+          <svg width="22" height="22">
+            <use xlink:href="#series" />
+          </svg>
+          <span>Series</span>
+        </div>
+      </div>
+      <div class="header-r">
+        <div class="header-r-search">
+          <svg width="22" height="22" style="margin-right: 10px;">
+            <use xlink:href="#search" />
+          </svg>
+          <span>Search</span>
+        </div>
+        <div class="header-r-user">
+          <svg width="22" height="22">
+            <use xlink:href="#user" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主要内容部分 -->
+  <div class="main">
+    <h2>Episodes</h2>
+    <div class="con">
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m2.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E10</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E10</span> Bat Mitzvah Crashers
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m3.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E9</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E9</span> My Girl Bina
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m4.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E7</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E7</span> WAGS
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+      <a href="#" class="sm-24 md-11 lg-7 xl-5">
+        <img src="./img/m1.jpg" alt="">
+        <div class="one">
+          Nobody Wants This <span>S1:E8</span>
+        </div>
+        <div class="two">
+          <p>Nobody Wants This</p>
+          <span>S1:E8</span> Rebecca's Box
+          <svg width="25" height="25">
+            <use xlink:href="#video" />
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="btn">
+      <button>Load more</button>
+    </div>
+  </div>
+
+  <!-- 底部部分 -->
+  <div class="footer">
+    <div class="footer-logo">
+      <!-- <svg width="120" height="28">
+            <use xlink:href="#logo" />
+          </svg> -->
+      <img class="header-logo" src="https://catflix.su/wp-content/themes/distv/resources/assets/img/catflix.svg" />
+    </div>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Series</a>
+      <a href="#">Search</a>
+    </div>
+    <div class="footer-copyright">
+      <span>© Distv+ 2023</span>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Series</a>
+      <a href="#">Search</a>
+    </div>
+  </div>
+
+  <!-- 底部固定部分 -->
+  <div class="tabbar">
+    <label for="home1" class="tabbar-item">
+      <input name="tabbar" id="home1" type="radio" style="display: none;">
+      <svg width="25" height="25">
+        <use xlink:href="#home" />
+      </svg>
+      <span>Home</span>
+    </label>
+    <label for="movie1" class="tabbar-item">
+      <input name="tabbar" id="movie1" type="radio" style="display: none;">
+      <svg width="25" height="25">
+        <use xlink:href="#movie" />
+      </svg>
+      <span>Movies</span>
+    </label>
+    <label for="series1" class="tabbar-item">
+      <input name="tabbar" id="series1" type="radio" style="display: none;">
+      <svg width="25" height="25">
+        <use xlink:href="#series" />
+      </svg>
+      <span>Series</span>
+    </label>
+  </div>
+</body>
+
+</html>
