@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <!-- 字体图标定义 -->
+    <svg style="display: none;">
+        <!-- home图标 -->
+        <symbol id="icon-home" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.223a1 1 0 0
+             1 1.228 0l8 6.223a1 1 0 0 1 .386.79zm-2-1V9.978l-7-5.444l-7 5.444V19zM7 15h10v2H7z"/>
+        </symbol>
+        <!-- 电影图标 -->
+        <symbol id="icon-movie" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M6 15v3h8v-7H6zm-2-2v-2H2V9h2V7H2v6zm0 2H2v1a2 2 0 0 0 2 2zm14-2V7h-2v2h2v2h-2v2zm0
+             2h-2v3a2 2 0 0 0 2-2zm-4-8V2H6v7h8zm4-2V4a2 2 0 0 0-2-2v3zM4 5V2a2 2 0 0 0-2 2v1zm0-5h12a4 4 0 0 1 4 4v12a4
+             4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"/>
+        </symbol>
+        <!-- 电视图标 -->
+        <symbol id="icon-tv" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <rect width="20" height="15" x="2" y="7" rx="2" ry="2"/>
+            <path d="m17 2l-5 5l-5-5"/></g>
+        </symbol>
+        <!-- 搜索图标 -->
+        <symbol id="icon-search" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path stroke-dasharray="40" stroke-dashoffset="40" d="M10.76 13.24c-2.34 -2.34 -2.34 -6.14 0 -8.49c2.34
+             -2.34 6.14 -2.34 8.49 0c2.34 2.34 2.34 6.14 0 8.49c-2.34 2.34 -6.14 2.34 -8.49 0Z">
+            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="40;0"/></path>
+            <path stroke-dasharray="12" stroke-dashoffset="12" d="M10.5 13.5l-7.5 7.5">
+            <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="12;0"/></path></g>
+        </symbol>
+        <!-- 用户图标 -->
+        <symbol id="icon-admin" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2a5 5 0 1 0 5 5a5 5 0 0 0-5-5m0 8a3 3 0 1 1 3-3a3 3 0 0 1-3 3m9 11v-1a7 7
+             0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"/>
+        </symbol>
+        <!-- 播放图标 -->
+        <symbol id="icon-play" viewBox="0 0 48 48">
+            <path fill="currentColor" stroke="currentColor" stroke-linejoin="round" stroke-width="4" d="m20 12l12 12l-12 12z"/>
+        </symbol>
+        <!-- 向左图标 -->
+        <symbol id="icon-left" viewBox="0 0 24 24">
+            <g fill="none" fill-rule="evenodd">
+            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/>
+            <path fill="currentColor" d="M7.94 13.06a1.5 1.5 0 0 1 0-2.12l5.656-5.658a1.5 1.5 0 1 1 2.121 2.122L11.122 12l4.596 4.596a1.5 1.5 0 1 1-2.12 2.122l-5.66-5.658Z"/></g>
+        </symbol>
+        <!-- 向右图标 -->
+        <symbol id="icon-right" viewBox="0 0 24 24">
+            <g fill="none" fill-rule="evenodd">
+            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/>
+            <path fill="currentColor" d="M16.06 10.94a1.5 1.5 0 0 1 0 2.12l-5.656 5.658a1.5 1.5 0 1 1-2.121-2.122L12.879 12L8.283 7.404a1.5 1.5 0 0 1 2.12-2.122l5.658 5.657Z"/></g>
+        </symbol>
+    </svg>
+    <!-- 定位布局开始 -->
+    <div class="fix">
+        <ul>
+            <li>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="#icon-home" />
+                    </svg>
+                    <b>Home</b>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="#icon-movie" />
+                    </svg>
+                    <b>Movies</b>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="#icon-tv" />
+                    </svg>
+                    <b>Series</b>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 定位布局结束 -->
+    <!-- 头部布局开始 -->
+    <div class="top">
+        <div class="top-nav warp">
+            <a href="#">
+                <img src="./images/catflix-dark.svg" alt="logo">
+            </a>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="#icon-home" />
+                            </svg>
+                            <b>Home</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="#icon-movie" />
+                            </svg>
+                            <b>Movies</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="#icon-tv" />
+                            </svg>
+                            <b>Series</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form action="#">
+                <input type="text" value="Search">
+                <svg>
+                    <use xlink:href="#icon-search" />
+                </svg>
+                <div class="admin">
+                    <svg>
+                        <use xlink:href="#icon-admin" />
+                    </svg>
+                </div>
+            </form>
+        </div>
+        <div class="top-introduction warp">
+            <h2>Nobody Wants This</h2>
+            <b>TMDB</b> <span style="color: aqua">7.7</span> <span> • 2 Seasons</span>
+            <br />
+            <svg>
+                <use xlink:href="#icon-play" />
+            </svg>
+            <button>watch now</button>
+            <button>Trailer</button>
+            <button>+</button>
+            <p>
+                An agnostic sex podcaster and a newly single rabbi fall in love, but can their relationship survive their wildly different […]
+            </p>
+        </div>
+        <div class="top-dots">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头部布局结束 -->
+    <!-- 主体布局开始 -->
+    <div class="main warp">
+        <b>Networks <a href="../networks/index.html"><span>view more</span>></a></b>
+        <div class="main-Net">
+            <button class="Net-left">
+                <svg>
+                    <use xlink:href="#icon-left" />
+                </svg>
+            </button>
+            <button class="Net-right">
+                <svg>
+                    <use xlink:href="#icon-right" />
+                </svg>
+            </button>
+            <ul>
+                <li>
+                    <b>Rai 1</b>
+                </li>
+                <li>
+                    <b>Yle Areena</b>
+                </li>
+                <li>
+                    <b>Crunchyroll</b>
+                </li>
+                <li>
+                    <b>TBS</b>
+                </li>
+                <li>
+                    <b>La Une</b>
+                </li>
+                <li>
+                    <b>BBC Three</b>
+                </li>
+            </ul>
+        </div>
+        <b>Latest episodes <a href="../networks/index.html"><span>view more</span>></a></b>
+        <div class="main-epi">
+            <button class="Net-left">
+                <svg>
+                    <use xlink:href="#icon-left" />
+                </svg>
+            </button>
+            <button class="Net-right">
+                <svg>
+                    <use xlink:href="#icon-right" />
+                </svg>
+            </button>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <b>Popular Series <a href="../networks/index.html"><span>view more</span>></a></b>
+        <div class="main-series">
+            <button class="Net-left series-left">
+                <svg>
+                    <use xlink:href="#icon-left" />
+                </svg>
+            </button>
+            <button class="Net-right series-right">
+                <svg>
+                    <use xlink:href="#icon-right" />
+                </svg>
+            </button>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <b>Popular Movies <a href="../networks/index.html"><span>view more</span>></a></b>
+        <div class="main-movies">
+            <button class="Net-left series-left">
+                <svg>
+                    <use xlink:href="#icon-left" />
+                </svg>
+            </button>
+            <button class="Net-right series-right">
+                <svg>
+                    <use xlink:href="#icon-right" />
+                </svg>
+            </button>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体布局结束 -->
+     <!-- 底部布局开始 -->
+    <div class="copy warp">
+        <div>
+            <img src="./images/catflix.svg" alt="logo">
+        </div>
+        <div class="copy-Center">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Series</a>
+            <a href="#">Search</a>
+        </div>
+        <div class="copy-Bottom">
+            <b>&copy;Distv+2023</b>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Series</a>
+            <a href="#">Search</a>
+        </div>
+    </div>
+    <!-- 底部布局结束 -->
+</body>
+</html>

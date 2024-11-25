@@ -1,0 +1,499 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+input {
+    border: none;
+}
+
+/* 版心 */
+.warp {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .warp {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .warp {
+        width: 992px;
+    }
+}
+
+/* 定位布局 */
+.fix {
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 0;
+    height: 54px;
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    z-index: 21;
+}
+
+.fix a {
+    display: flex;
+    align-items: center;
+    width: 120px;
+}
+
+.fix ul {
+    width: 400px;
+    height: 54px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fix ul li {
+    border-radius: 30px;
+    margin: 5px 0;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.fix ul li a {
+    color: #000;
+}
+
+.fix ul li a svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 20px;
+}
+
+.fix ul li:hover {
+    background-color: #fff;
+}
+
+/* 头部样式 */
+.top {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: linear-gradient(to right,rgba(0,0,0,0.8),rgba(170,50,190,0.8),rgba(0,0,0,0.8)),url("../images/home-top1.jpg");
+}
+
+.top .top-nav {
+    height: 54px;
+    padding: 44px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .top .nav {
+        display: none;
+    }
+    .fix{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .top .nav {
+        width: 400px;
+    }
+}
+
+.top a {
+    display: flex;
+    align-items: center;
+    width: 120px;
+}
+
+.top .nav {
+    height: 54px;
+    background-color: rgba(170,50,190,0.8);
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.top .nav ul {
+    width: 400px;
+    height: 54px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top .nav ul li {
+    border-radius: 30px;
+    margin: 5px 0;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.top .nav ul li a{
+    color: #000;
+}
+
+.top .nav ul li a svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 20px;
+}
+
+.top .nav ul li:hover {
+    outline: 1px solid #ccc;
+}
+
+.top form {
+    width: 190px;
+    height: 43px;
+    line-height: 54px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top form input {
+    width: 75px;
+    padding-left: 50px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.top form input:hover,
+.top form input:hover + svg{
+    background-color: #000;
+    color: #fff;
+}
+
+.top form>svg {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    left: 18px;
+    top: 14px;
+}
+
+.top form div {
+    width: 43px;
+    height: 43px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.top .admin {
+    cursor: pointer;
+    position: relative;
+}
+
+.top .admin:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.top .admin svg{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    top: 12px;
+    left: 14px;
+}
+
+.top-introduction {
+    margin-top: 100px;
+    position: relative;
+    color: #fff;
+}
+
+.top-introduction svg {
+    width: 16px;
+    height: 16px;
+    color: #000;
+    position: absolute;
+    left: 30px;
+    top: 70px;
+}
+
+.top-introduction button {
+    border-radius: 25px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.top-introduction button:nth-child(7) {
+    width: 200px;
+}
+
+.top-introduction button:nth-child(8) {
+    width: 100px;
+    background-color: #000;
+    color: #fff;
+}
+
+.top-introduction button:nth-child(9) {
+    width: 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.top-introduction button:nth-child(7):hover {
+    background-color: #ccc;
+}
+
+.top-introduction button:nth-child(8):hover,
+.top-introduction button:nth-child(9):hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.top-dots {
+    width: 150px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.top-dots ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-dots ul li {
+    width: 8px;
+    height: 8px;
+    background-color: #777;
+    outline: 2px solid #eee;
+    border-radius: 50%;
+}
+
+/* 主体样式 */
+.main {
+    background-color: #eee;
+    padding: 50px 0;
+}
+
+.main .main-Net,
+.main .main-epi,
+.main .main-series,
+.main .main-movies {
+    overflow: hidden;
+    position: relative;
+}
+
+.Net-left {
+    position: absolute;
+    cursor: pointer;
+    top: 75px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #777;
+    border-color: #777;
+    z-index: 21;
+}
+
+.Net-left svg {
+    width: 16px;
+    height: 16px;
+}
+
+.Net-left:active ~ ul {
+    transform: translate(-820px,0);
+}
+
+.Net-right:active ~ ul {
+    transform: translate(820px,0);
+}
+
+.Net-right {
+    position: absolute;
+    cursor: pointer;
+    left: 942px;
+    top: 75px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #777;
+    border-color: #777;
+    z-index: 21;
+}
+
+.series-left,
+.series-right {
+    top: 215px;
+}
+
+.Net-right svg {
+    width: 16px;
+    height: 16px;
+}
+
+.main .main-Net ul,
+.main .main-epi ul,
+.main .main-series ul,
+.main .main-movies ul {
+    height: 150px;
+    margin: 20px 0;
+    width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s;
+}
+
+.main .main-Net ul li,
+.main .main-epi ul li,
+.main .main-series ul li,
+.main .main-movies ul li{
+    width: 250px;
+    height: 150px;
+    transition: all .3s;
+    border-radius: 20px;
+    outline: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    background-size: contain;
+}
+
+.main  ul li:hover {
+    box-shadow: 20px 0 10px;
+}
+
+.main .main-series ul,
+.main .main-movies ul {
+    height: 450px;
+}
+
+.main .main-series ul li,
+.main .main-movies ul li{
+    height: 450px;
+}
+
+.main .main-epi ul li:nth-child(1) {
+    background: url("../images/episodes1.jpg") no-repeat;
+}
+
+.main .main-epi ul li:nth-child(2) {
+    background: url("../images/episodes2.jpg") no-repeat;
+}
+
+.main .main-epi ul li:nth-child(3) {
+    background: url("../images/episodes3.jpg") no-repeat;
+}
+
+.main .main-epi ul li:nth-child(4) {
+    background: url("../images/episodes4.jpg") no-repeat;
+}
+
+.main .main-epi ul li:nth-child(5) {
+    background: url("../images/episodes5.jpg") no-repeat;
+}
+
+.main .main-epi ul li:nth-child(6) {
+    background: url("../images/episodes6.jpg") no-repeat;
+}
+
+.main .main-series ul li:nth-child(1) {
+    background: url("../images/series1.jpg") no-repeat;
+}
+
+.main .main-series ul li:nth-child(2) {
+    background: url("../images/series2.jpg") no-repeat;
+}
+
+.main .main-series ul li:nth-child(3) {
+    background: url("../images/series3.jpg") no-repeat;
+}
+
+.main .main-series ul li:nth-child(4) {
+    background: url("../images/series4.jpg") no-repeat;
+}
+
+.main .main-series ul li:nth-child(5) {
+    background: url("../images/series5.jpg") no-repeat;
+}
+
+.main .main-series ul li:nth-child(6) {
+    background: url("../images/series6.jpg") no-repeat;
+}
+
+.main .main-movies ul li:nth-child(1) {
+    background: url("../images/movies1.jpg") no-repeat;
+}
+
+.main .main-movies ul li:nth-child(2) {
+    background: url("../images/movies2.jpg") no-repeat;
+}
+
+.main .main-movies ul li:nth-child(3) {
+    background: url("../images/movies3.jpg") no-repeat;
+}
+
+.main .main-movies ul li:nth-child(4) {
+    background: url("../images/movies4.jpg") no-repeat;
+}
+
+.main .main-movies ul li:nth-child(5) {
+    background: url("../images/movies5.jpg") no-repeat;
+}
+
+.main .main-movies ul li:nth-child(6) {
+    background: url("../images/movies6.jpg") no-repeat;
+}
+
+/* 底部样式 */
+.copy {
+    height: 150px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.copy img {
+    width: 120px;
+}
+
+.copy a:hover {
+    text-decoration: underline;
+}
+
+.copy-Center {
+    width: 340px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bolder;
+    margin: 25px auto;
+}
+
+.copy-Center a {
+    color: #000;
+}
+
+.copy-Bottom,
+.copy-Bottom a {
+    font-weight: bolder;
+    color: #777;
+}
+
+.copy-Bottom {
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
