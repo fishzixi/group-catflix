@@ -1,628 +1,498 @@
-/* 全局样式 */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-a {
+body {
+    background-color: #f2f6fa;
+}
+
+/* 顶部部分 */
+.header {
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+.header>div {
+    width: 100%;
+    height: 48px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 当屏幕大小 小于1280px时 */
+@media screen and (max-width: 1280px) {
+    .header {
+        max-width: 960px;
+        padding: 48px 32px;
+    }
+}
+
+/* 当屏幕大小 小于1280px 大于1024时 */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .header {
+        max-width: 960px;
+        padding: 48px 32px;
+    }
+}
+
+/* 当屏幕大小 小于1024px 大于768时 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        max-width: 720px;
+        padding: 16px 24px;
+    }
+}
+
+/* 当屏幕大小 小于1024px 大于768时 */
+@media screen and (min-width: 639.2px) and (max-width: 768px) {
+    .header {
+        max-width: 592px;
+        padding: 16px 24px;
+    }
+}
+
+/* 当屏幕大小 小于639.2px */
+@media screen and (max-width: 639.2px) {
+    .header {
+        max-width: 592px;
+        padding: 16px 16px;
+    }
+}
+
+
+.header-logo {
+    width: 120px;
+    height: 28px;
+}
+
+.header-menu {
+    height: 58px;
+    border: 0.8px solid #c3c7d8;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 29px;
+    box-sizing: border-box;
+    background-color: rgba(213, 216, 237, 0.4);
+    cursor: pointer;
+    /* box-sizing: border-box; */
+}
+
+.header-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    font-weight: 500;
+    gap: 12px;
+    border: 0.8px solid transparent;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    /* background-color: blue; */
+    height: 48px;
+}
+
+.header-menu-item:hover {
+    background-color: #fff;
+}
+
+.header-r {
+    display: flex;
+    align-items: center;
+}
+
+.header-r-search {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 125px; */
+    /* height: 48px; */
+    border-radius: 24px;
+    border: 1px solid #64748b33;
+    box-sizing: border-box;
+    /* background-color: #64748b1a; */
+    background-color: #f3f9fb;
+    padding: 13px 25px 13px 16px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header-r-search {
+        display: none;
+    }
+}
+
+.header-r-search:hover {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.header-r-user {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #64748b33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-left: 20px;
+    background-color: #64748b1a;
+}
+
+.header-r-user:hover {
+    background-color: #000;
+    color: #fff !important;
+}
+
+/* .header-r__profile>img {
+    width: 20px;
+} */
+
+/* 当屏幕尺寸小于770px container的宽度就是屏幕的宽 */
+/* 当屏幕尺寸大于等于于770px container的宽度就是770px */
+
+
+/* .container {
+    height: 400px;
+    margin: auto;
+    min-width: 550px;
+} */
+
+
+
+/* @media screen and (max-width: 770px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 771px) {
+    .container {
+        width: 770px;
+    }
+} */
+
+@media screen and (max-width: 1024px) {
+    .header-menu {
+        display: none;
+    }
+}
+
+/* 主要内容部分 */
+.main {
+    max-width: 1216px;
+    /* height: 1241px; */
+    padding: 0 32px 48px 32px;
+    /* margin: 0 116.4px; */
+    margin: 0 auto;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+/* 当屏幕大小 小于1280px时 */
+@media screen and (max-width: 1280px) {
+    .main {
+        max-width: 960px;
+    }
+
+    /* .main .con a {
+        height: 128px;
+    } */
+}
+
+/* 当屏幕大小 小于1280px 大于1024时 */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .main {
+        max-width: 960px;
+        /* padding: 0 24px 48px 24px; */
+    }
+}
+
+/* 当屏幕大小 小于1024px 大于768时 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main {
+        max-width: 720px;
+        padding: 16px 24px 136px 24px;
+    }
+}
+
+/* 当屏幕大小 小于1024px 大于768时 */
+@media screen and (min-width: 639.2px) and (max-width: 768px) {
+    .main {
+        max-width: 592px;
+        padding: 16px 24px 136px 24px;
+    }
+}
+
+/* 当屏幕大小 小于639.2px */
+@media screen and (max-width: 639.2px) {
+    .main {
+        max-width: 592px;
+        padding: 16px 16px 136px 16px;
+    }
+
+    /* .main .con a {
+        height: 128px;
+    } */
+}
+
+.main .con {
+    /* height: 1105px; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 20px 0;
+    /* background-color: red; */
+    /* justify-content: space-between; */
+}
+
+/* @media (max-width: 1000px) {
+    .main .con a {
+        width: calc(33% - 20px);
+    }
+    .main .con a:hover {
+        width: 33%;
+    }
+}
+
+@media (max-width: 700px) {
+    .main .con a {
+        width: calc(50% - 20px);
+    }
+    .main .con a:hover {
+        width: 50%;
+    }
+} */
+
+/* @media (max-width: 700px) {
+    .head .nav {
+        position: fixed;
+        bottom: 0;
+    }
+} */
+
+.main .con a {
+    display: block;
+    /* width: 23%; */
+    height: 158px;
+    box-sizing: border-box;
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    transition: all linear .2s;
+    gap: 0 10px;
+    position: relative;
+}
+
+.main a img {
+    width: 100%;
+    /* height: 158px; */
+    height: 100%;
+    border-radius: 10px;
+}
+
+.main a:hover {
+    /* background-color: white; */
+    transform: scale(1.06);
+    border: 3px solid #cbd5e1;
+}
+
+.main a:hover .one {
+    display: none;
+}
+
+.main a:hover .two {
+    display: block;
+}
+
+/* .main a:hover div {
+    display: none;
+} */
+
+.main a div {
+    width: 100%;
+    background-color: rgba(49, 50, 58, 0.4);
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: white;
+}
+
+.main a .one {
+    padding: 12px 4px 12px 12px;
+    /* display: none; */
+}
+
+.main a .two {
+    padding: 12px 4px 18px 14px;
+    display: none;
+}
+
+.main a .two p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.main a div span {
+    color: #22d3ee;
+}
+
+.main a .two svg {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    /* animation: all linear .5s; */
+}
+
+
+.main .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.main .btn button:active {
+    background-color: #000;
+    outline: #888 solid 3px;
+}
+
+.main .btn button {
+    width: 130px;
+    height: 48px;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    margin-top: 24px;
+    border-radius: 24px;
+    /* border: 1px solid #999; */
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #e2e8f0;
+    font-weight: bold;
+}
+
+/* .main .btn button:hover .main .con  */
+
+.main .btn button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* 底部部分 */
+.footer {
+    /* width: 1216px; */
+    height: 108px;
+    padding: 96px 32px;
+    /* margin: 0 116.4px; */
+    margin: 0 auto;
+    /* margin-top: 40px; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    /* height: 130px; */
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        display: none;
+    }
+}
+
+.footer img {
+    margin-bottom: 12px;
+}
+
+/* .footer span {
+    color: #747f97;
+} */
+
+.footer a:link {
+    /* color: #64748b; */
+    /* color: #6c7a91; */
     text-decoration: none;
 }
 
-ul li {
-    list-style: none;
-}
-
-input {
-    border: none;
-}
-
-/* 版心 */
-.warp {
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 992px) {
-    .warp {
-        width: 100vw;
-    }
-}
-
-@media screen and (min-width: 993px) {
-    .warp {
-        width: 992px;
-    }
-}
-
-/* 定位布局 */
-.fix {
-    display: none;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%,0);
-    bottom: 0;
-    height: 54px;
-    background-color: rgba(255,255,255,0.8);
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    z-index: 21;
-}
-
-.fix a {
-    display: flex;
-    align-items: center;
-    width: 120px;
-}
-
-.fix ul {
-    width: 400px;
-    height: 54px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.fix ul li {
-    border-radius: 30px;
-    margin: 5px 0;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-}
-
-.fix ul li a {
-    color: #000;
-}
-
-.fix ul li a svg {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px 0 20px;
-}
-
-.fix ul li:hover {
-    background-color: #fff;
-}
-
-/* 头部样式 */
-.top {
-    height: 54px;
-    padding: 44px 0;
-    background-color: #eee;
-    display: flex;
-    justify-content: space-between;
-}
-
-@media screen and (max-width: 800px) {
-    .top .nav {
-        display: none;
-    }
-    .fix{
-        display: block;
-    }
-}
-
-@media screen and (min-width: 801px) {
-    .top .nav {
-        width: 400px;
-    }
-}
-
-.top a {
-    display: flex;
-    align-items: center;
-    width: 120px;
-}
-
-.top .nav {
-    height: 54px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
-
-.top .nav ul {
-    width: 400px;
-    height: 54px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.top .nav ul li {
-    border-radius: 30px;
-    margin: 5px 0;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-}
-
-.top .nav ul li a{
-    color: #000;
-}
-
-.top .nav ul li a svg {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px 0 20px;
-}
-
-.top .nav ul li:hover {
-    background-color: #fff;
-}
-
-.top form {
-    width: 190px;
-    height: 43px;
-    line-height: 54px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.top form input {
-    width: 75px;
-    padding-left: 50px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.top form input:hover,
-.top form input:hover + svg{
-    background-color: #000;
-    color: #fff;
-}
-
-.top form>svg {
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    position: absolute;
-    left: 18px;
-    top: 14px;
-}
-
-.top form div {
-    width: 43px;
-    height: 43px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-}
-
-.top .admin {
-    cursor: pointer;
-    position: relative;
-}
-
-.top .admin:hover {
-    color: #fff;
-    background-color: #000;
-}
-
-.top .admin svg{
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    top: 12px;
-    left: 14px;
-}
-
-.top .top-introduction {
-    color: #fff;
-}
-
-/* 主体样式 */
-.main {
-    background-color: #eee;
-}
-
-.main ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: space-between;
-    align-items: center;
-}
-
-.main ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eee;
-}
-
-.main ul li svg{
-    margin: 20px;
-    background-color: #ccc;
-    border: 1px solid #777;
-    border-radius: 10px;
-    transition: all .5s;
-}
-
-.main ul li svg:hover {
-    box-shadow: 10px 10px 10px;
-}
-
-@media screen and (max-width:556px) {
-    .sm-hidden {
-        display: none;
-    }
-    .sm-visible {
-        display: block;
-    }
-    .sm-1 {
-        width: 4.16666666667%;
-    }
-    .sm-2 {
-        width: 8.33333333333%;
-    }
-    .sm-3 {
-        width: 12.5%;
-    }
-    .sm-4 {
-        width: 16.66666666667%;
-    }
-    .sm-5 {
-        width: 20.83333333333%;
-    }
-    .sm-6 {
-        width: 25%;
-    }
-    .sm-7 {
-        width: 29.16666666667%;
-    }
-    .sm-8 {
-        width: 33.33333333333%;
-    }
-    .sm-9 {
-        width: 37.5%;
-    }
-    .sm-10 {
-        width: 41.66666666667%;
-    }
-    .sm-11 {
-        width: 45.83333333333%;
-    }
-    .sm-12 {
-        width: 50%;
-    }
-    .sm-13 {
-        width: 54.16666666667%;
-    }
-    .sm-14 {
-        width: 58.33333333333%;
-    }
-    .sm-15 {
-        width: 62.5%;
-    }
-    .sm-16 {
-        width: 66.66666666667%;
-    }
-    .sm-17 {
-        width: 70.83333333333%;
-    }
-    .sm-18 {
-        width: 75%;
-    }
-    .sm-19 {
-        width: 79.16666666667%;
-    }
-    .sm-20 {
-        width: 83.33333333333%;
-    }
-    .sm-21 {
-        width: 87.5%;
-    }
-    .sm-22 {
-        width: 91.66666666667%;
-    }
-    .sm-23 {
-        width: 95.83333333333%;
-    }
-    .sm-24 {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width:556px) and (max-width:768px) {
-    .md-hidden {
-        display: none;
-    }
-    .md-visible {
-        display: block;
-    }
-    .md-1 {
-        width: 4.16666666667%;
-    }
-    .md-2 {
-        width: 8.33333333333%;
-    }
-    .md-3 {
-        width: 12.5%;
-    }
-    .md-4 {
-        width: 16.66666666667%;
-    }
-    .md-5 {
-        width: 20.83333333333%;
-    }
-    .md-6 {
-        width: 25%;
-    }
-    .md-7 {
-        width: 29.16666666667%;
-    }
-    .md-8 {
-        width: 33.33333333333%;
-    }
-    .md-9 {
-        width: 37.5%;
-    }
-    .md-10 {
-        width: 41.66666666667%;
-    }
-    .md-11 {
-        width: 45.83333333333%;
-    }
-    .md-12 {
-        width: 50%;
-    }
-    .md-13 {
-        width: 54.16666666667%;
-    }
-    .md-14 {
-        width: 58.33333333333%;
-    }
-    .md-15 {
-        width: 62.5%;
-    }
-    .md-16 {
-        width: 66.66666666667%;
-    }
-    .md-17 {
-        width: 70.83333333333%;
-    }
-    .md-18 {
-        width: 75%;
-    }
-    .md-19 {
-        width: 79.16666666667%;
-    }
-    .md-20 {
-        width: 83.33333333333%;
-    }
-    .md-21 {
-        width: 87.5%;
-    }
-    .md-22 {
-        width: 91.66666666667%;
-    }
-    .md-23 {
-        width: 95.83333333333%;
-    }
-    .md-24 {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width:768px) and (max-width:992px) {
-    .lg-hidden {
-        display: none;
-    }
-    .lg-visible {
-        display: block;
-    }
-    .lg-1 {
-        width: 4.16666666667%;
-    }
-    .lg-2 {
-        width: 8.33333333333%;
-    }
-    .lg-3 {
-        width: 12.5%;
-    }
-    .lg-4 {
-        width: 16.66666666667%;
-    }
-    .lg-5 {
-        width: 20.83333333333%;
-    }
-    .lg-6 {
-        width: 25%;
-    }
-    .lg-7 {
-        width: 29.16666666667%;
-    }
-    .lg-8 {
-        width: 33.33333333333%;
-    }
-    .lg-9 {
-        width: 37.5%;
-    }
-    .lg-10 {
-        width: 41.66666666667%;
-    }
-    .lg-11 {
-        width: 45.83333333333%;
-    }
-    .lg-12 {
-        width: 50%;
-    }
-    .lg-13 {
-        width: 54.16666666667%;
-    }
-    .lg-14 {
-        width: 58.33333333333%;
-    }
-    .lg-15 {
-        width: 62.5%;
-    }
-    .lg-16 {
-        width: 66.66666666667%;
-    }
-    .lg-17 {
-        width: 70.83333333333%;
-    }
-    .lg-18 {
-        width: 75%;
-    }
-    .lg-19 {
-        width: 79.16666666667%;
-    }
-    .lg-20 {
-        width: 83.33333333333%;
-    }
-    .lg-21 {
-        width: 87.5%;
-    }
-    .lg-22 {
-        width: 91.66666666667%;
-    }
-    .lg-23 {
-        width: 95.83333333333%;
-    }
-    .lg-24 {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width:992px) {
-    .xl-hidden {
-        display: none;
-    }
-    .xl-visible {
-        display: block;
-    }
-    .xl-1 {
-        width: 4.16666666667%;
-    }
-    .xl-2 {
-        width: 8.33333333333%;
-    }
-    .xl-3 {
-        width: 12.5%;
-    }
-    .xl-4 {
-        width: 16.66666666667%;
-    }
-    .xl-5 {
-        width: 20.83333333333%;
-    }
-    .xl-6 {
-        width: 25%;
-    }
-    .xl-7 {
-        width: 29.16666666667%;
-    }
-    .xl-8 {
-        width: 33.33333333333%;
-    }
-    .xl-9 {
-        width: 37.5%;
-    }
-    .xl-10 {
-        width: 41.66666666667%;
-    }
-    .xl-11 {
-        width: 45.83333333333%;
-    }
-    .xl-12 {
-        width: 50%;
-    }
-    .xl-13 {
-        width: 54.16666666667%;
-    }
-    .xl-14 {
-        width: 58.33333333333%;
-    }
-    .xl-15 {
-        width: 62.5%;
-    }
-    .xl-16 {
-        width: 66.66666666667%;
-    }
-    .xl-17 {
-        width: 70.83333333333%;
-    }
-    .xl-18 {
-        width: 75%;
-    }
-    .xl-19 {
-        width: 79.16666666667%;
-    }
-    .xl-20 {
-        width: 83.33333333333%;
-    }
-    .xl-21 {
-        width: 87.5%;
-    }
-    .xl-22 {
-        width: 91.66666666667%;
-    }
-    .xl-23 {
-        width: 95.83333333333%;
-    }
-    .xl-24 {
-        width: 100%;
-    }
-}
-
-.main .more {
-    width: 100px;
-    height: 50px;
-    font-weight: bold;
-    border: 1px solid #777;
-    margin: 50px 0;
-    border-radius: 30px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%,0);
-}
-
-.main .more:hover {
-    color: #fff;
-    background-color: #000;
-}
-
-/* 底部样式 */
-.copy {
-    height: 150px;
-    font-size: 12px;
-    text-align: center;
-    background-color: #eee;
-}
-
-.copy img {
-    width: 120px;
-}
-
-.copy a:hover {
+.footer a:link:hover {
     text-decoration: underline;
 }
 
-.copy-Center {
-    width: 340px;
-    display: flex;
-    justify-content: space-around;
-    font-weight: bolder;
-    margin: 25px auto;
+.footer-links>a {
+    color: #171618;
 }
 
-.copy-Center a {
-    color: #000;
+.footer-links>a:link {
+    margin: 0 10px;
+    /* color: #000; */
+    color: #423e45;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.copy-Bottom,
-.copy-Bottom a {
-    font-weight: bolder;
-    color: #777;
+.footer-links>a:link:hover {
+    text-decoration: underline;
 }
 
-.copy-Bottom {
-    width: 340px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+.footer-copyright>* {
+    font-size: 13px;
+    margin: 0 10px;
+    font-weight: bold;
+    color: #758198;
+}
+
+/* 底部固定部分 */
+.tabbar {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 64px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+    .tabbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #fafbfd;
+    }
+
+    .tabbar-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        color: #555;
+    }
+
+    .tabbar-item>input:checked~svg {
+        color: #207ee1;
+    }
+
+    .tabbar-item>input:checked~span {
+        color: #207ee1;
+    }
 }
