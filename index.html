@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="./img/catflix.svg" alt="">
+        </div>
+        <div class="home">
+            <div><img src="./img/home.svg" alt="">Home</div>
+            <div><img src="./img/movie.svg" alt="">Movies</div>
+            <div><img src="./img/tv.svg" alt="">Series</div>
+        </div>
+        <div class="search">
+            <div>
+                <img src="./img/search.svg" alt="">
+                    Search
+            </div>
+            <div class="tx">
+                <img src="./img/user.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="main w">
+        <div>
+            <img src="./img/catflix.svg" alt="">
+        </div>
+        <p>免费在线观看电影</p>
+        <div class="search1">
+            <img src="./img/search.svg" alt="">
+            <input type="search" placeholder="搜索">
+        </div>
+        <button>主页</button>
+    </div>
+
+    <div class="que w">
+        <h1>常见问题解答</h1>
+        <p>浏览我们的常见问题解答，获取有关使用我们的流媒体服务（从订阅详细信息到故障排除）的快速解答。获得您所需的帮助，轻松欣赏您喜爱的电影和节目！</p>
+        <div class="con">
+            <input style="display: none;" id="toggle" type="checkbox" />
+            <label for="toggle">
+                <span>什么是Catflix?</span>
+                <img src="./img/plus.svg" alt="">
+            </label>
+            <div>Catflix是一个提供各种电影和电视剧的流媒体平台。通过我们，您可以随时随地在任何设备上免费享受令人兴奋的高质量内容。</div>
+        </div>
+    </div>
+
+    <div class="bottom w">
+        <img src="./img/catflix.svg" alt="">
+        <p>
+            <a href="#">Home</a>&emsp;&emsp;
+            <a href="#">Movies</a>&emsp;&emsp;
+            <a href="#">Series</a>&emsp;&emsp;
+            <a href="#">search</a>&emsp;&emsp;
+        </p>
+        <p class="last">© Distv+ 2023&emsp;&emsp;Home&emsp;&emsp;Movies&emsp;&emsp;Series&emsp;&emsp;search</p>
+    </div>
+
+
+    <div class="tabbar">
+        <label for="home1" class="tabbar-item">
+          <input name="tabbar" id="home1" type="radio" style="display: none;">
+          <svg width="25" height="25">
+            <use xlink:href="#home" />
+          </svg>
+          <span>首页</span>
+        </label>
+        <label for="movie1" class="tabbar-item">
+          <input name="tabbar" id="movie1" type="radio" style="display: none;">
+          <svg width="25" height="25">
+            <use xlink:href="#movie" />
+          </svg>
+          <span>电影</span>
+        </label>
+        <label for="series1" class="tabbar-item">
+          <input name="tabbar" id="series1" type="radio" style="display: none;">
+          <svg width="25" height="25">
+            <use xlink:href="#series" />
+          </svg>
+          <span>电视剧</span>
+        </label>
+      </div>
+</body>
+</html>

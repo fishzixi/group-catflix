@@ -1,463 +1,361 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background-color: #f2f6fa;
-}
-
-/* 顶部部分 */
-.header {
-    max-width: 1216px;
+.top {
+    width: 80%;
     margin: 0 auto;
-    padding: 48px 32px;
+    height: 48px;
+    padding: 48px 0;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.header>div {
-    width: 100%;
+.top .logo {
+    width: 120px;
     height: 48px;
-    /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /* background-color: aqua; */
 }
 
-/* 当屏幕大小 小于1280px时 */
-@media screen and (max-width: 1280px) {
-    .header {
-        max-width: 960px;
-        padding: 48px 32px;
-    }
-}
-
-/* 当屏幕大小 小于1280px 大于1024时 */
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-    .header {
-        max-width: 960px;
-        padding: 48px 32px;
-    }
-}
-
-/* 当屏幕大小 小于1024px 大于768时 */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .header {
-        max-width: 720px;
-        padding: 16px 24px;
-    }
-}
-
-/* 当屏幕大小 小于1024px 大于768时 */
-@media screen and (min-width: 639.2px) and (max-width: 768px) {
-    .header {
-        max-width: 592px;
-        padding: 16px 24px;
-    }
-}
-
-/* 当屏幕大小 小于639.2px */
-@media screen and (max-width: 639.2px) {
-    .header {
-        max-width: 592px;
-        padding: 16px 16px;
-    }
-}
-
-
-.header-logo {
+.top .logo img {
     width: 120px;
     height: 28px;
 }
 
-.header-menu {
-    height: 58px;
-    border: 0.8px solid #c3c7d8;
+.top .home {
+    width: 400px;
+    height: 48px;
+    background: rgba(0, 0, 0, .05);
+    border-radius: 26px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     padding: 4px;
-    border-radius: 29px;
-    box-sizing: border-box;
-    background-color: rgba(213, 216, 237, 0.4);
-    cursor: pointer;
-    /* box-sizing: border-box; */
+    border: 1px solid #c3c3d8;
 }
 
-.header-menu-item {
+.top .home div {
+    border-radius: 24px;
+    padding: 8px 24px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 24px;
-    font-weight: 500;
-    gap: 12px;
-    border: 0.8px solid transparent;
-    padding: 8px 24px;
-    box-sizing: border-box;
-    /* background-color: blue; */
-    height: 48px;
 }
 
-.header-menu-item:hover {
+.home div:hover {
     background-color: #fff;
 }
 
-.header-r {
-    display: flex;
-    align-items: center;
+.home div img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
-.header-r-search {
-    cursor: pointer;
+.top .search {
+    /* width: 170px; */
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top .search div:nth-child(1) {
+    width: 125px;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid #aaa;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 125px; */
-    /* height: 48px; */
-    border-radius: 24px;
-    border: 1px solid #64748b33;
+    padding: 8px 24px 8px 16px;
     box-sizing: border-box;
-    /* background-color: #64748b1a; */
-    background-color: #f3f9fb;
-    padding: 13px 25px 13px 16px;
-}
-
-@media screen and (max-width: 1024px) {
-    .header-r-search {
-        display: none;
-    }
-}
-
-.header-r-search:hover {
-    background-color: #000;
-    color: #fff !important;
-}
-
-.header-r-user {
     cursor: pointer;
+}
+
+.top .search div img {
+    width: 20px;
+    height: 20px;
+}
+
+/* .top .search input::after {
+    content: 'Search';
+    display: block;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    
+} */
+
+.search .tx {
     width: 48px;
     height: 48px;
     border-radius: 24px;
-    border: 1px solid #64748b33;
+    background-color: #e8ecef;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 16px;
+    border: 1px solid #aaa;
     box-sizing: border-box;
-    margin-left: 20px;
-    background-color: #64748b1a;
-}
-
-.header-r-user:hover {
-    background-color: #000;
-    color: #fff !important;
-}
-
-/* .header-r__profile>img {
-    width: 20px;
-} */
-
-/* 当屏幕尺寸小于770px container的宽度就是屏幕的宽 */
-/* 当屏幕尺寸大于等于于770px container的宽度就是770px */
-
-
-/* .container {
-    height: 400px;
-    margin: auto;
-    min-width: 550px;
-} */
-
-
-
-/* @media screen and (max-width: 770px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 771px) {
-    .container {
-        width: 770px;
-    }
-} */
-
-@media screen and (max-width: 1024px) {
-    .header-menu {
-        display: none;
-    }
-}
-
-/* 主要内容部分 */
-.main {
-    max-width: 1216px;
-    /* height: 1241px; */
-    padding: 0 32px 48px 32px;
-    /* margin: 0 116.4px; */
-    margin: 0 auto;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-/* 当屏幕大小 小于1280px时 */
-@media screen and (max-width: 1280px) {
-    .main {
-        max-width: 960px;
-    }
-
-    /* .main .con a {
-        height: 128px;
-    } */
-}
-
-/* 当屏幕大小 小于1280px 大于1024时 */
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-    .main {
-        max-width: 960px;
-        /* padding: 0 24px 48px 24px; */
-    }
-}
-
-/* 当屏幕大小 小于1024px 大于768时 */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .main {
-        max-width: 720px;
-        padding: 16px 24px 136px 24px;
-    }
-}
-
-/* 当屏幕大小 小于1024px 大于768时 */
-@media screen and (min-width: 639.2px) and (max-width: 768px) {
-    .main {
-        max-width: 592px;
-        padding: 16px 24px 136px 24px;
-    }
-}
-
-/* 当屏幕大小 小于639.2px */
-@media screen and (max-width: 639.2px) {
-    .main {
-        max-width: 592px;
-        padding: 16px 16px 136px 16px;
-    }
-
-    /* .main .con a {
-        height: 128px;
-    } */
-}
-
-.main .con {
-    /* height: 1105px; */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 0;
-    justify-content: space-between;
-    align-content: space-between;
-    margin: 20px 0;
-    /* background-color: red; */
-    /* justify-content: space-between; */
-}
-
-/* @media (max-width: 1000px) {
-    .main .con a {
-        width: calc(33% - 20px);
-    }
-    .main .con a:hover {
-        width: 33%;
-    }
-}
-
-@media (max-width: 700px) {
-    .main .con a {
-        width: calc(50% - 20px);
-    }
-    .main .con a:hover {
-        width: 50%;
-    }
-} */
-
-/* @media (max-width: 700px) {
-    .head .nav {
-        position: fixed;
-        bottom: 0;
-    }
-} */
-
-.main .con a {
-    display: block;
-    /* width: 23%; */
-    height: 158px;
-    box-sizing: border-box;
-    background-color: #e2e8f0;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    transition: all linear .2s;
-    gap: 0 10px;
-    position: relative;
-}
-
-.main a img {
-    width: 100%;
-    /* height: 158px; */
-    height: 100%;
-    border-radius: 10px;
-}
-
-.main a:hover {
-    /* background-color: white; */
-    transform: scale(1.06);
-    border: 3px solid #cbd5e1;
-}
-
-.main a:hover .one {
-    display: none;
-}
-
-.main a:hover .two {
-    display: block;
-}
-
-/* .main a:hover div {
-    display: none;
-} */
-
-.main a div {
-    width: 100%;
-    background-color: rgba(49, 50, 58, 0.4);
-    position: absolute;
-    bottom: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-sizing: border-box;
-    font-weight: bold;
-    color: white;
-}
-
-.main a .one {
-    padding: 12px 4px 12px 12px;
-    /* display: none; */
-}
-
-.main a .two {
-    padding: 12px 4px 18px 14px;
-    display: none;
-}
-
-.main a .two p {
-    font-size: 12px;
-    margin-bottom: 5px;
-}
-
-.main a div span {
-    color: #22d3ee;
-}
-
-.main a .two svg {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    /* animation: all linear .5s; */
-}
-
-
-.main .btn {
-    display: flex;
-    justify-content: center;
-}
-
-.main .btn button:active {
-    background-color: #000;
-    outline: #888 solid 3px;
-}
-
-.main .btn button {
-    width: 130px;
-    height: 48px;
-    padding: 8px 24px;
-    box-sizing: border-box;
-    margin-top: 24px;
-    border-radius: 24px;
-    /* border: 1px solid #999; */
-    border: 1px solid #cbd5e1;
-    font-size: 15px;
     cursor: pointer;
-    background-color: #e2e8f0;
-    font-weight: bold;
 }
 
-/* .main .btn button:hover .main .con  */
+.search .tx img {
+    width: 20px;
+    height: 20px;
+}
 
-.main .btn button:hover {
+.top .search div:nth-child(1):hover {
     background-color: black;
     color: white;
 }
 
+.search .tx:hover{
+    background-color: black;
+    color: white;
+}
 
-/* 底部部分 */
-.footer {
-    /* width: 1216px; */
-    height: 108px;
-    padding: 96px 32px;
-    /* margin: 0 116.4px; */
-    margin: 0 auto;
-    /* margin-top: 40px; */
+/* 主要内容部分 */
+
+.main {
+    height: 256px;
+    padding: 48px 0;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main div:nth-child(1) {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.main div:nth-child(1) img {
+    width: 256px;
+    height: 60px;
+}
+
+.main p {
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+
+/* .main form {
+    position: relative;
+} */
+
+/* .main form img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 13px;
+    left: 15px;
+} */
+ .main .search1 {
+    width: 100%;
+    height: 48px;
+    /* background-color: red; */
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border: 1px solid #aaa;
+    transition: all ease-in 200ms;
+ } 
+
+ .main .search1 img {
+    width: 20px;
+    height: 25px;
+    margin: 12px;
+ }
+.main .search1:focus-within {
+    outline: 2px solid #cbd5e1;
+    border-color: #cbd5e1;
+  }
+
+.main input {
+    flex: 1;
+    height: 20px;
+    border: none;
+    outline: none;
+    /* color: #64748b;
+    font-size: 16px; */
+    /* padding: 8px 16px 8px 48px; */
+    margin: 0 3px 0 0;
+    font-size: 16px;
+    /* border: 1px solid #aaa; */
+}
+
+.main button {
+  padding: 8px 24px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #000;
+  border: none;
+  outline: transparent solid 3px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main button:hover {
+    background-color: #000000cc;
+}
+
+.main button:active {
+    background-color: #000;
+    outline: #888 solid 3px;
+}
+
+/* .main a { */
+    /* width: 80px;
+    height: 48px; */
+    /* display: block; */
+    /* text-align: center; */
+/* } */
+
+/* .main div:nth-of-type(2) {
     display: flex;
     align-items: center;
+    justify-content: center;
+} */
+
+/* .main div:nth-of-type(2) button {
+    width: 80px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 8px 24px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+} */
+
+
+.que {
+    height: 430px;
+    padding-top: 96px;
+}
+.que h1{
     text-align: center;
-    flex-direction: column;
-    /* height: 130px; */
+    font-size: 27px;
+}
+
+.que>p {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 24px;
+    /* font-weight: 600; */
+    padding: 16px 0 48px 0;
+}
+
+.que .con {
+    border: 1px solid #d6dae3;
+    padding: 20px 24px;
+    /* background-color: #e2ebf4; */
+    background: rgba(0, 0, 0, .05);
+    /* margin-bottom: 85px; */
+    border-radius: 10px;
+    /* display: flex;
     justify-content: space-between;
-    /* background-color: red; */
+    align-items: center; */
+    cursor: pointer;
+    /* margin-bottom: 96px; */
 }
 
-@media screen and (max-width: 1024px) {
-    .footer {
-        display: none;
-    }
+.que .con label {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 68px;
+  font-size: 18px;
+  /* font-weight: 500; */
+  /* padding: 20px 24px; */
+  /* box-sizing: border-box; */
 }
 
-.footer img {
+.que .con label img {
+    width: 24px;
+    height: 24px;
+    transition: all ease-in-out 300ms;
+}
+
+.que .con div {
+    height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  line-height: 24px;
+  transition: height ease-in 200ms;
+}
+
+#toggle:checked ~ label > img {
+    transform: rotate(45deg);
+    color: #0891b2;
+  }
+
+  #toggle:checked ~ div {
+    height: 64px;
+  }
+/* .que .con div:nth-of-type(1) {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.que .con span:nth-of-type(1) {
+    width: 24px;
+    height: 24px;
+}
+
+.que .con span:nth-of-type(1) img {
+    width: 24px;
+    height: 24px;
+} */
+
+.bottom {
+    /* text-align: center; */
+    height: 108px;
+    padding-bottom: 96px;
+    /* padding: 96px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom img {
+    width: 120px;
+    height: 28px;
     margin-bottom: 12px;
 }
 
-/* .footer span {
-    color: #747f97;
-} */
-
-.footer a:link {
-    /* color: #64748b; */
-    /* color: #6c7a91; */
-    text-decoration: none;
+.bottom p a {
+    /* margin: 15px 0; */
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
 }
 
-.footer a:link:hover {
-    text-decoration: underline;
+.bottom .last {
+    color: #64748b;
+    font-size: 14px;
 }
 
-.footer-links>a {
-    color: #171618;
-}
 
-.footer-links>a:link {
-    margin: 0 10px;
-    /* color: #000; */
-    color: #423e45;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-links>a:link:hover {
-    text-decoration: underline;
-}
-
-.footer-copyright>* {
-    font-size: 13px;
-    margin: 0 10px;
-    font-weight: bold;
-    color: #758198;
-}
-
-/* 底部固定部分 */
 .tabbar {
     display: none;
     position: fixed;
@@ -468,31 +366,58 @@ body {
     width: 100vw;
     height: 64px;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-    margin-top: 24px;
-}
+  }
 
-@media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
+    .header {
+      padding: 48px 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .header-r__search {
+      display: none;
+    }
+  }
+
+  /* 当屏幕尺寸小于770px container的宽度就是屏幕的宽 */
+/* 当屏幕尺寸大于等于于770px container的宽度就是770px */
+
+  @media screen and (max-width: 770px) {
+    .container {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 771px) {
+    .container {
+      width: 770px;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .header-menu {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
     .tabbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #fafbfd;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #fff;
     }
-
     .tabbar-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        cursor: pointer;
-        color: #555;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      cursor: pointer;
     }
-
-    .tabbar-item>input:checked~svg {
-        color: #207ee1;
+    .tabbar-item > input:checked ~ svg {
+      color: #207ee1;
     }
-
-    .tabbar-item>input:checked~span {
-        color: #207ee1;
+    .tabbar-item > input:checked ~ span {
+      color: #207ee1;
     }
 }
