@@ -24,60 +24,79 @@
 }
 
 .top .home {
-    width: 400px;
-    height: 48px;
-    background: rgba(0, 0, 0, .05);
-    border-radius: 26px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 4px;
-    border: 1px solid #c3c3d8;
+  /* width: 400px; */
+  height: 48px;
+  background: rgba(0, 0, 0, .05);
+  border-radius: 26px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid #c3c3d8;
+  background: rgba(0, 0, 0, .1);
 }
 
-.top .home div {
-    border-radius: 24px;
-    padding: 8px 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.top .home a {
+  display: block;
+  border-radius: 24px;
+  padding: 12px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 }
 
-.home div:hover {
-    background-color: #fff;
+.home a:hover {
+  background-color: #fff;
 }
 
-.home div img {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+.home a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .top .search {
-    /* width: 170px; */
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  /* width: 170px; */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.top .search div:nth-child(1) {
-    width: 125px;
-    height: 48px;
-    border-radius: 24px;
-    border: 1px solid #aaa;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 24px 8px 16px;
-    box-sizing: border-box;
-    cursor: pointer;
+.top .search a {
+  display: block;
+  width: 125px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px 8px 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: normal;
 }
 
-.top .search div img {
+/* .top .search div img {
     width: 20px;
     height: 20px;
+} */
+.top .search .search-l {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 125px;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #64748b33;
+  box-sizing: border-box;
+  /* background-color: #64748b1a; */
+  background-color: white;
+  /* padding: 8px 24px 8px 16px; */
 }
 
 /* .top .search input::after {
@@ -108,7 +127,7 @@
     height: 20px;
 }
 
-.top .search div:nth-child(1):hover {
+.top .search a:hover {
     background-color: black;
     color: white;
 }

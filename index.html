@@ -6,6 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/base.css">
+    <svg width="0" height="0">
+        <symbol id="search" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8a7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42M5 11a6 6 0 1 1 6 6a6 6 0 0 1-6-6" />
+          </symbol>
+          <symbol id="user" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </g>
+          </symbol>
+    </svg>
 </head>
 <body>
     <div class="top">
@@ -13,31 +25,29 @@
             <img src="./img/catflix.svg" alt="">
         </div>
         <div class="home">
-            <div><img src="./img/home.svg" alt="">Home</div>
-            <div><img src="./img/movie.svg" alt="">Movies</div>
-            <div><img src="./img/tv.svg" alt="">Series</div>
+            <a href="./home.html">
+                <img src="./img/home.svg" alt="">Home
+            </a>
+            <a href="./movies.html">
+                <img src="./img/movie.svg" alt="">Movies
+            </a>
+            <a href="./series.html">
+                <img src="./img/tv.svg" alt="">Series
+            </a>
         </div>
         <div class="search">
-            <div>
-                <img src="./img/search.svg" alt="">
-                    Search
-            </div>
+            <a class="search-l" href="./search.html">
+                <svg width="22" height="22">
+                  <use xlink:href="#search" />
+                </svg>
+                <span>Search</span>
+            </a>
             <div class="tx">
-                <img src="./img/user.svg" alt="">
+              <svg width="20" height="20">
+                <use xlink:href="#user" />
+              </svg>
             </div>
         </div>
-    </div>
-
-    <div class="main w">
-        <div>
-            <img src="./img/catflix.svg" alt="">
-        </div>
-        <p>免费在线观看电影</p>
-        <div class="search1">
-            <img src="./img/search.svg" alt="">
-            <input type="search" placeholder="搜索">
-        </div>
-        <button>主页</button>
     </div>
 
     <div class="que w">
