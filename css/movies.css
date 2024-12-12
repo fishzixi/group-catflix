@@ -17,6 +17,79 @@ ul li {
     list-style: none;
 }
 
+
+/* 弹框 */
+.bomb-box {
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 3;
+    visibility: hidden;
+    /* position: relative; */
+
+    /* visibility: visible; */
+}
+
+.bomb-box .one {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.bomb-box  form {
+    height: 200px;
+    
+}
+
+.bomb-box .bomb-logo {
+    text-align: center;
+}
+
+.bomb-box input{
+    width: 350px;
+    height: 60px;
+    margin-top: 20px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+.bomb-box img {
+    width: 120px;
+    height: 28px;
+}
+
+.eye {
+    position: relative;
+}
+
+.eye svg {
+    position: absolute;
+    right:25px;
+    top: 45%;
+
+}
+
+#sign-in {
+    background-color: black;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
 /* 头部开始 */
 
 .top {
@@ -192,6 +265,29 @@ ul li {
 
 .search .user a {
     height: 50px;
+}
+
+#user {
+    position: relative;
+}
+
+#user-sign li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+
+}
+
+#user #user-sign {
+    display: none;
+    width: 225px;
+    height: 80px;
+    position: absolute;
+    top:55px;
+    right: 0px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15px;
 }
 /* 头部结束 */
 .top_movies {
